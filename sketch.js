@@ -45,13 +45,13 @@ function draw() {
   background(220);
   drawSprites();
   text(mouseX+","+mouseY,50,50);
-  if(mousePressedOver(rock)||touches.lenght>0){
+  if(mousePressedOver(rock)||touches.length>0){
 player.changeImage("rock",rockimage)
 player.scale=1;
 playershape=1;
     touches=[];
   }
-  if(mousePressedOver(paper)||touches.lenght>0){
+  if(mousePressedOver(paper)||touches.length>0){
 player.changeImage("paper",paperimage)
 player.scale=1;
 playershape=2;
