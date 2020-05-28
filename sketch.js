@@ -61,13 +61,14 @@ playershape=2;
     playershape=3;
 
   }
-if(mousePressedOver(rock)||mousePressedOver(paper)||mousePressedOver(scissors)){
+if(mousePressedOver(rock)||mousePressedOver(paper)||mousePressedOver(scissors)||touches.length>0){
   gamestate="play";
 var computernum=Math.round(random(1,3));
 if(computernum===1){
 com.changeImage("rock",rockimage)
 com.scale=1;
 computershape=1;
+  touches=[];
 }
 if(computernum===2){
 com.changeImage("paper",paperimage)
