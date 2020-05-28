@@ -45,20 +45,23 @@ function draw() {
   background(220);
   drawSprites();
   text(mouseX+","+mouseY,50,50);
-  if(mousePressedOver(rock)){
+  if(mousePressedOver(rock)||touches.lenght>0){
 player.changeImage("rock",rockimage)
 player.scale=1;
 playershape=1;
+    touches=[];
   }
-  if(mousePressedOver(paper)){
+  if(mousePressedOver(paper)||touches.lenght>0){
 player.changeImage("paper",paperimage)
 player.scale=1;
 playershape=2;
+    touches=[];
   }
-  if(mousePressedOver(scissors)){
+  if(mousePressedOver(scissors)||touches.length>0){
     player.changeImage("scissors",scissorsimage)
     player.scale=1;
     playershape=3;
+    touches=[];
 
   }
 if(mousePressedOver(rock)||mousePressedOver(paper)||mousePressedOver(scissors)||touches.length>0){
